@@ -32,7 +32,7 @@ int main() {
             printf("Numero primo: %d\n" , numeroCorrente);
         }
 
-        // Passiamo al successivo numero
+        // Passiamo al numero successivo
         numeroCorrente++;
     }
 
