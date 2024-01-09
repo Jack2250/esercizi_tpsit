@@ -28,7 +28,7 @@ int main() {
             somma += numeroCorrente;
             contatorePrimi++;
 
-            // Stampiamo il numero primo e la somma finora
+            // Stampiamo il numero primo
             printf("Numero primo: %d\n" , numeroCorrente);
         }
 
