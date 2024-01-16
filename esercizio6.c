@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    double popolazioneIniziale, popolazioneDaRaggiungere;
+    double popolazioneIniziale, popolazioneDaRaggiungere, divisione;
     int anni = 0;
 
     // Input della popolazione iniziale e quella da raggiungere
@@ -14,7 +14,9 @@ int main() {
     // Calcolo del numero di anni necessari
     while (popolazioneIniziale < popolazioneDaRaggiungere) {
         popolazioneIniziale *= 2;   // Raddoppia la popolazione ogni anno
-        popolazioneIniziale /= 3;   // Cala di un terzo l'anno successivo
+        anni ++;
+        divisione=popolazioneIniziale /3;   // Cala di un terzo l'anno successivo
+        popolazioneIniziale=popolazioneIniziale-divisione;
         anni++;
     }
 
