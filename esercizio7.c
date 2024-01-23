@@ -14,7 +14,7 @@ int main() {
     massimo = minimo = numero;
 
     // Leggi gli altri numeri e aggiorna massimo e minimo
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; i++) {
         scanf("%d", &numero);
 
         if (numero > massimo) {
