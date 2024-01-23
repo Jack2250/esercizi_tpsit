@@ -26,8 +26,9 @@ int main()
         giorno++
     }
     
-    printf("Mario ha mangiato %d\n",giorno);
-    printf("")
+    printf("Mario ha mangiato %d\n giorni",giorno);
+    printf("Mario ha mangiato %d\n pastine",pastina);
+    printf("Mario ha mangiato %f\n panini",panino);
 
     return 0;
 }
