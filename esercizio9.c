@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int num_azioni = 0;
-    int MAX_AZIONI = 100;
+    int numAzioni = 0;
 
     while (1) {
         int giorno, mese, anno;
@@ -14,7 +13,7 @@ int main() {
         printf("Inserisci il prezzo dell'azione: ");
         scanf("%f", &prezzo);
 
-        num_azioni++;
+        numAzioni++;
 
         printf("\nVuoi inserire un'altra azione? (s/n): ");
         scanf(" %c", &scelta);
@@ -23,58 +22,58 @@ int main() {
     }
 
     // Calcolo della somma e della media dei prezzi delle azioni
-    float somma_prezzi = 0;
-    float media_prezzi = 0;
-    for (int i = 0; i < num_azioni; i++) {
+    float sommaPrezzi = 0;
+    float mediaPrezzi = 0;
+    for (int i = 0; i < numAzioni; i++) {
         float prezzo;
         printf("\nInserisci il prezzo dell'azione %d: ", i + 1);
         scanf("%f", &prezzo);
-        somma_prezzi += prezzo;
+        sommaPrezzi += prezzo;
     }
-    if (num_azioni > 0)
-        media_prezzi = somma_prezzi / num_azioni;
+    if (numAzioni > 0)
+        mediaPrezzi = sommaPrezzi / numAzioni;
 
-    printf("\nSomma dei prezzi delle azioni: %.2f euro", somma_prezzi);
-    printf("\nMedia dei prezzi delle azioni: %.2f euro", media_prezzi);
+    printf("\nSomma dei prezzi delle azioni: %.2f euro", sommaPrezzi);
+    printf("\nMedia dei prezzi delle azioni: %.2f euro", mediaPrezzi);
 
     // Calcolo del prezzo massimo e del prezzo minimo
-    float prezzo_massimo = 0;
-    float prezzo_minimo = 0;
-    for (int i = 0; i < num_azioni; i++) {
+    float prezzoMassimo = 0;
+    float prezzoMinimo = 0;
+    for (int i = 0; i < numAzioni; i++) {
         float prezzo;
         printf("\nInserisci il prezzo dell'azione %d: ", i + 1);
         scanf("%f", &prezzo);
         if (i == 0) {
-            prezzo_massimo = prezzo;
-            prezzo_minimo = prezzo;
+            prezzoMassimo = prezzo;
+            prezzoMinimo = prezzo;
         } else {
-            if (prezzo > prezzo_massimo)
-                prezzo_massimo = prezzo;
-            if (prezzo < prezzo_minimo)
-                prezzo_minimo = prezzo;
+            if (prezzo > prezzoMassimo)
+                prezzoMassimo = prezzo;
+            if (prezzo < prezzoMinimo)
+                prezzoMinimo = prezzo;
         }
     }
 
-    printf("\nPrezzo massimo tra le azioni: %.2f euro", prezzo_massimo);
-    printf("\nPrezzo minimo tra le azioni: %.2f euro", prezzo_minimo);
+    printf("\nPrezzo massimo tra le azioni: %.2f euro", prezzoMassimo);
+    printf("\nPrezzo minimo tra le azioni: %.2f euro", prezzoMinimo);
 
     // Calcolo della media con un importo compreso tra 2,50 e 3,50 euro
-    int num_azioni_ristretto = 0;
-    float somma_prezzi_ristretto = 0;
-    float media_prezzi_ristretto = 0;
-    for (int i = 0; i < num_azioni; i++) {
+    int numAzioniRistretto = 0;
+    float sommaPrezziRistretto = 0;
+    float mediaPrezziRistretto = 0;
+    for (int i = 0; i < numAzioni; i++) {
         float prezzo;
         printf("\nInserisci il prezzo dell'azione %d: ", i + 1);
         scanf("%f", &prezzo);
         if (prezzo >= 2.50 && prezzo <= 3.50) {
-            somma_prezzi_ristretto += prezzo;
-            num_azioni_ristretto++;
+            sommaPrezziRistretto += prezzo;
+            numAzioniRistretto++;
         }
     }
-    if (num_azioni_ristretto > 0)
-        media_prezzi_ristretto = somma_prezzi_ristretto / num_azioni_ristretto;
+    if (numAzioniRistretto > 0)
+        mediaPrezziRistretto = sommaPrezziRistretto / numAzioniRistretto;
 
-    printf("\nMedia dei prezzi delle azioni con prezzo tra 2,50 e 3,50 euro: %.2f euro", media_prezzi_ristretto);
+    printf("\nMedia dei prezzi delle azioni con prezzo tra 2,50 e 3,50 euro: %.2f euro", mediaPrezziRistretto);
 
     return 0;
 }
